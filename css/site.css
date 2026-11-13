@@ -279,6 +279,27 @@ img {
   object-fit: cover;
 }
 
+.photo--portrait {
+  min-height: 560px;
+}
+
+.photo--portrait img {
+  object-position: center 30%;
+}
+
+.quote {
+  margin: 24px 0;
+  padding: 4px 0 4px 24px;
+  border-left: 4px solid var(--accent);
+  font-size: 20px;
+  font-style: italic;
+  color: var(--ink);
+}
+
+.quote p {
+  margin: 0;
+}
+
 .hero[style],
 .band[style] {
   background-size: cover;
