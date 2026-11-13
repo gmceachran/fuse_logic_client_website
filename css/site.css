@@ -1001,3 +1001,21 @@ img {
     height: 46px;
   }
 }
+
+.booking-widget {
+  min-width: 280px;
+  height: 700px;
+  margin-top: 24px;
+}
+
+.booking-fallback {
+  margin: 12px 0 0;
+  font-size: 15px;
+  color: var(--muted);
+}
+
+@media (max-width: 600px) {
+  .booking-widget {
+    height: 900px;
+  }
+}
