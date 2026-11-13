@@ -227,6 +227,44 @@ img {
   border-color: var(--primary-dark);
 }
 
+.button:not(.button--light) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.button:not(.button--light)::after {
+  content: "\2192";
+  display: inline-block;
+  max-width: 0;
+  margin-left: 0;
+  opacity: 0;
+  overflow: hidden;
+  transform: translateX(-6px);
+  transition:
+    max-width 0.25s ease,
+    margin-left 0.25s ease,
+    opacity 0.2s ease,
+    transform 0.25s ease;
+}
+
+.button:not(.button--light):hover::after,
+.button:not(.button--light):focus-visible::after {
+  max-width: 1.2em;
+  margin-left: 10px;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button:not(.button--light)::after {
+    transition: none;
+  }
+}
+
 .button--light {
   background: transparent;
   border-color: var(--white);
@@ -239,6 +277,7 @@ img {
 }
 
 .nav .button,
+.nav .button:hover,
 .nav .button[aria-current="page"] {
   margin-left: 12px;
   padding: 12px 20px;
@@ -345,6 +384,46 @@ img {
   padding: 150px 0 140px;
 }
 
+.hero--motion {
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.hero--motion::before,
+.hero--motion::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.hero--motion::before {
+  z-index: -2;
+  background: var(--hero-img) center top / cover no-repeat;
+  transform-origin: center top;
+  animation: hero-pan 12s ease-in-out infinite;
+  will-change: transform;
+}
+
+.hero--motion::after {
+  z-index: -1;
+  background: var(--overlay);
+}
+
+@keyframes hero-pan {
+  from {
+    transform: scale(1.06) translateY(0);
+  }
+  to {
+    transform: scale(1.16) translateY(-5%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero--motion::before {
+    animation: none;
+  }
+}
+
 .hero--home h1,
 .hero--home p {
   margin-left: auto;
@@ -390,6 +469,32 @@ img {
 
 .section {
   padding: 96px 0;
+}
+
+.section {
+  overflow-x: clip;
+}
+
+.reveal-right {
+  opacity: 0.3;
+  transform: translateX(65vw);
+}
+
+.reveal-right.is-revealed {
+  transition:
+    opacity 1.6s ease,
+    transform 2.4s cubic-bezier(0.12, 0.9, 0.2, 1);
+}
+
+@media (max-width: 960px) {
+  .reveal-right {
+    transform: translateX(100vw);
+  }
+}
+
+.reveal-right.is-revealed {
+  opacity: 1;
+  transform: none;
 }
 
 .section--cream {
@@ -818,4 +923,43 @@ img {
   .booking-placeholder {
     min-height: 360px;
   }
+}
+
+.band {
+  overflow: clip;
+}
+
+.reveal-up {
+  opacity: 0.3;
+  transform: translateY(100vh);
+}
+
+.reveal-up.is-revealed {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 1s ease,
+    transform 1.4s cubic-bezier(0.12, 0.9, 0.2, 1);
+}
+
+.reveal-up:not(.is-revealed),
+.reveal-right:not(.is-revealed) {
+  transition: none;
+}
+
+.reveal-rise {
+  opacity: 0.3;
+  transform: translateY(90px);
+}
+
+.reveal-rise.is-revealed {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 0.9s ease,
+    transform 1.2s cubic-bezier(0.12, 0.9, 0.2, 1);
+}
+
+.reveal-rise:not(.is-revealed) {
+  transition: none;
 }
