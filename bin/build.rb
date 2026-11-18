@@ -25,7 +25,7 @@ IMG = {
   "aircraft fuselage in a hangar" => ["takeoff-night", "Airliner taking off at dusk"],
   "hangar interior with aircraft nose" => ["hangar", "Airliner seen through open hangar doors"],
   "services band" => ["engine", ""],
-  "portrait of Chase (real photo)" => ["chase", "Chase, co-founder of Fuselagic"]
+  "portrait of Chase (real photo)" => ["chase", "Chase, co-founder of FuseLogic"]
 }.freeze
 
 def photo(label, extra = "")
@@ -152,7 +152,7 @@ def header(root, active)
     </div>
     <header class="site-header">
       <div class="container">
-        <a class="logo" href="#{root}index.html"><img src="#{root}images/logo.png" alt="Fuselagic, aircraft technical record services" width="900" height="243"></a>
+        <a class="logo" href="#{root}index.html"><img src="#{root}images/logo.png" alt="FuseLogic, aircraft technical record services" width="900" height="243"></a>
         <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
         <nav class="nav" id="site-nav">
           <a href="#{root}index.html"#{cur.("home")}>Home</a>
@@ -177,7 +177,7 @@ def footer(root)
       <div class="container">
         <div class="footer-grid">
           <div>
-            <a class="footer-logo" href="#{root}index.html"><img src="#{root}images/logo-icon.png" alt="" width="256" height="256"><span>Fuse<span>lagic</span></span></a>
+            <a class="footer-logo" href="#{root}index.html"><img src="#{root}images/logo-icon.png" alt="" width="256" height="256"><span>Fuse<span>Logic</span></span></a>
             <p style="margin-top: 16px">Aircraft records, organized at speed. Discreet, accurate documentation work for lessors, operators and MROs.</p>
           </div>
           <div>
@@ -202,7 +202,7 @@ def footer(root)
             </ul>
           </div>
         </div>
-        <div class="footer-base">&copy; 2026 Fuselagic LLC</div>
+        <div class="footer-base">&copy; 2026 FuseLogic LLC</div>
       </div>
     </footer>
   HTML
@@ -269,8 +269,8 @@ def hero(title, sub, photo_label, button_href, button_text, eyebrow: nil)
 end
 
 page("index.html",
-  title: "Fuselagic | Aircraft Records Services",
-  description: "Fuselagic organizes, digitizes, reviews and produces aircraft records for lessors, operators and MROs, with fast turnaround and full discretion.",
+  title: "FuseLogic | Aircraft Records Services",
+  description: "FuseLogic organizes, digitizes, reviews and produces aircraft records for lessors, operators and MROs, with fast turnaround and full discretion.",
   active: "home",
   body: ->(root) {
     cards = SERVICES.map do |s|
@@ -289,7 +289,7 @@ page("index.html",
       <section class="hero hero--home hero--motion" style="--hero-img: url('/images/#{IMG.fetch("widebody aircraft in a hangar at night")[0]}.jpg')">
         <div class="container">
           <p class="eyebrow">Aircraft records services</p>
-          <h1>Fuselagic</h1>
+          <h1>FuseLogic</h1>
           <p>Aircraft records, organized at speed. We sort, digitize, review and produce the documentation behind every purchase, sale, lease and return, so your transaction isn't waiting on paperwork.</p>
           <div class="button-row">
             <a class="button" href="#services">Our Services</a>
@@ -306,8 +306,8 @@ page("index.html",
             <h2>Where aviation meets technology</h2>
             <p>Every aircraft transaction depends on proving what the aircraft is made of and where each controlled part came from. That proof is still largely assembled by hand, at enormous cost in time.</p>
             <p>That's the work we take off your plate. You send us your records as they are, and we send them back organized, reviewed and ready for your transaction.</p>
-            <p>Fuselagic brings together aviation industry relationships and a team experienced in building software and data systems. Our methods were developed on real-world records packages provided through industry partners.</p>
-            <a class="button" href="#{root}about.html">About Fuselagic</a>
+            <p>FuseLogic brings together aviation industry relationships and a team experienced in building software and data systems. Our methods were developed on real-world records packages provided through industry partners.</p>
+            <a class="button" href="#{root}about.html">About FuseLogic</a>
           </div>
         </div>
       </section>
@@ -344,7 +344,7 @@ page("index.html",
   })
 
 page("services/index.html",
-  title: "Services | Fuselagic",
+  title: "Services | FuseLogic",
   description: "Document organization, digitization, records review, lease return review and document production for commercial aircraft.",
   active: "services",
   body: ->(root) {
@@ -371,7 +371,7 @@ page("services/index.html",
 
 SERVICES.each do |s|
   page("services/#{s[:slug]}.html",
-    title: "#{s[:name]} | Fuselagic",
+    title: "#{s[:name]} | FuseLogic",
     description: s[:blurb],
     active: s[:slug],
     body: ->(root) {
@@ -393,7 +393,7 @@ SERVICES.each do |s|
           <div class="container split split--reverse">
             #{photo("sample organized records index, anonymized")}
             <div>
-              <h2>Fuselagic can:</h2>
+              <h2>FuseLogic can:</h2>
               <ul class="checklist">
             #{items}
               </ul>
@@ -405,17 +405,17 @@ SERVICES.each do |s|
 end
 
 page("about.html",
-  title: "About | Fuselagic",
-  description: "Fuselagic brings aviation industry relationships and technology experience together on aircraft records work.",
+  title: "About | FuseLogic",
+  description: "FuseLogic brings aviation industry relationships and technology experience together on aircraft records work.",
   active: "about",
   body: ->(root) {
     <<~HTML
-      #{hero("About Fuselagic", "Aviation records, approached as a data problem.", "commercial aircraft on final approach", "#{root}contact.html", "Contact Us")}
+      #{hero("About FuseLogic", "Aviation records, approached as a data problem.", "commercial aircraft on final approach", "#{root}contact.html", "Contact Us")}
       <section class="section">
         <div class="container split">
           <div class="split-copy">
             <h2>Bringing two industries together</h2>
-            <p>Fuselagic was founded to bring the aviation and technology sectors together on one of the industry's most manual jobs: assembling and reviewing aircraft records. Every purchase, sale, lease and return requires proving what an aircraft is made of, and that proof is still largely assembled page by page.</p>
+            <p>FuseLogic was founded to bring the aviation and technology sectors together on one of the industry's most manual jobs: assembling and reviewing aircraft records. Every purchase, sale, lease and return requires proving what an aircraft is made of, and that proof is still largely assembled page by page.</p>
             <p>Our team pairs aviation industry relationships with experience building software and data systems. Our methods were developed on real-world records packages provided through industry partners, including the landing gear records of an Airbus A330.</p>
           </div>
           #{photo("hangar with aircraft under maintenance")}
@@ -428,9 +428,9 @@ page("about.html",
           <div class="split-copy">
             <p class="eyebrow">Our story</p>
             <h2>Meet Chase</h2>
-            <p>Chase Proctor, co-founder, leads client relationships at Fuselagic and brings a background in international sales.</p>
+            <p>Chase Proctor, co-founder, leads client relationships at FuseLogic and brings a background in international sales.</p>
             <blockquote class="quote">
-              <p>&ldquo;Growing up in a family of Boeing engineers, my grandparents would tell me stories about the design challenges they faced. My grandma created the program to introduce software into the fault-finding networks between engineering and manufacturing. She showed me how much impact one person can have on a company's workflow by finding simple solutions to complex problems. That is, more or less, the same thing we have done here at Fuselagic.&rdquo;</p>
+              <p>&ldquo;Growing up in a family of Boeing engineers, my grandparents would tell me stories about the design challenges they faced. My grandma created the program to introduce software into the fault-finding networks between engineering and manufacturing. She showed me how much impact one person can have on a company's workflow by finding simple solutions to complex problems. That is, more or less, the same thing we have done here at FuseLogic.&rdquo;</p>
             </blockquote>
             <p>If you're reading this, you have probably already spoken with Chase, and he's the best person to talk to about your next records project.</p>
             <a class="button" href="#{root}contact.html">Book a call with Chase</a>
@@ -460,8 +460,8 @@ page("about.html",
   })
 
 page("contact.html",
-  title: "Contact Us | Fuselagic",
-  description: "Book a call with Chase at Fuselagic to talk about your aircraft records.",
+  title: "Contact Us | FuseLogic",
+  description: "Book a call with Chase at FuseLogic to talk about your aircraft records.",
   active: "contact",
   show_cta: false,
   body: ->(root) {

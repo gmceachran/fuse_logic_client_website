@@ -7,7 +7,7 @@ Read `README.md` for the layout, build, preview, deploy and DNS details.
 - Visitors arrive after meeting Chase Proctor. The site's job is credibility,
   and its only call to action is to contact Chase: book a call through the
   Calendly widget on `contact.html`, or email him.
-- Fuselagic sells a **service**: clients send records as they are and get them
+- FuseLogic sells a **service**: clients send records as they are and get them
   back organized, reviewed and ready for their transaction. Talking about
   bringing aviation and technology together is fine. Never present the
   software, databases or hosting as something the client buys or uses.
@@ -16,8 +16,8 @@ Read `README.md` for the layout, build, preview, deploy and DNS details.
 
 ## Copy rules
 
-- Spell the name **Fuselagic**, lowercase "l", matching the logo. The legal
-  name is **Fuselagic LLC**.
+- Spell the name **FuseLogic**, capital "L". The legal
+  name is **FuseLogic LLC**.
 - Never invent facts: no made-up staff, AI-generated faces, clients,
   testimonials, certifications, years in business or performance numbers. If
   copy needs a fact nobody has given you, mark it
@@ -26,7 +26,7 @@ Read `README.md` for the layout, build, preview, deploy and DNS details.
   publish numbers; point people to Chase for specifics.
 - Don't mention NDAs. Confidentiality copy says the legal team handles any
   agreements on discretion and non-disclosure.
-- Fuselagic doesn't certify documents. It organizes them and records missing
+- FuseLogic doesn't certify documents. It organizes them and records missing
   or contradictory documentation.
 - There is no parts business or parts link.
 - Photos are free-license stock (Unsplash) without airline logos. Any photo of
