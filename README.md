@@ -1,6 +1,6 @@
 # Fuselagic client website
 
-The public site for Fuselagic LLC, live at **https://fuselagic.com**. It's a
+The public site for Fuselagic LLC, live at **https://fuselogic.aero**. It's a
 static brochure site that people visit after meeting Chase Proctor
 (co-founder, sales). Its job is to make the company look credible and get the
 visitor to book a call with Chase or email him.
@@ -58,11 +58,14 @@ gh run watch --repo gmceachran/fuse_logic_client_website
 - **Hosting:** GitHub Pages from the public repo
   `gmceachran/fuse_logic_client_website`, branch `main`, root folder. HTTPS is
   on and enforced.
-- **Domain:** fuselagic.com, registered at Namecheap. DNS is
-  managed in Namecheap under Advanced DNS.
+- **Domain:** fuselogic.aero, registered at 101domain. DNS is managed in
+  101domain's DNS manager.
+- **Old domain:** fuselagic.com, registered at Namecheap. It stays registered
+  and redirects to fuselogic.aero, because Chase's email address and Calendly
+  link use it.
 - **Email:** chaseproctor@fuselagic.com runs on Google Workspace.
 
-DNS records for fuselagic.com:
+DNS records for fuselogic.aero (at 101domain):
 
 | Type | Host | Value | Purpose |
 |---|---|---|---|
@@ -71,6 +74,14 @@ DNS records for fuselagic.com:
 | A | `@` | `185.199.110.153` | GitHub Pages |
 | A | `@` | `185.199.111.153` | GitHub Pages |
 | CNAME | `www` | `gmceachran.github.io.` | GitHub Pages |
+| TXT | `_github-pages-challenge-gmceachran` | from GitHub profile Settings → Pages | Verifies the domain for GitHub Pages |
+
+DNS records for fuselagic.com (at Namecheap, Advanced DNS):
+
+| Type | Host | Value | Purpose |
+|---|---|---|---|
+| URL Redirect (301) | `@` | `https://fuselogic.aero/` | Sends visitors to the new domain |
+| URL Redirect (301) | `www` | `https://fuselogic.aero/` | Sends visitors to the new domain |
 | MX | `@` | `smtp.google.com`, priority 1 | Google Workspace mail |
 | TXT | `@` | `v=spf1 include:_spf.google.com ~all` | Lets Google send as @fuselagic.com |
 | TXT | `@` | `google-site-verification=…` | Google Workspace ownership |
@@ -78,18 +89,18 @@ DNS records for fuselagic.com:
 In Namecheap, MX records live under **Mail Settings** (set to Custom MX), not
 in the main Host Records list.
 
-### Moving to another domain
+### Changing domains
 
-To serve the site on a new domain (for example fuselogic.aero), whoever holds
-that domain adds the four A records and the `www` CNAME above at their
-registrar. Then:
+The site moved from fuselagic.com to fuselogic.aero in November 2026. To move
+it again:
 
-1. Change `CNAME` to the new domain, and change the domain in `robots.txt` and
-   `sitemap.xml`.
-2. Push, then wait for GitHub to issue the HTTPS certificate (15–60 minutes)
+1. Add the four A records and the `www` CNAME at the new domain's registrar.
+2. Change `CNAME` to the new domain, and change the domain in `robots.txt`,
+   `sitemap.xml` and this README.
+3. Push, then wait for GitHub to issue the HTTPS certificate (15–60 minutes)
    and confirm "Enforce HTTPS" is on in the repo's Settings → Pages.
-3. Keep fuselagic.com registered and pointing at the new domain, because Chase's
-   email address and Calendly link use it.
+4. Only after the push, point the old domain at the new one. Changing it
+   earlier takes the site offline.
 
 ## Other domains
 
