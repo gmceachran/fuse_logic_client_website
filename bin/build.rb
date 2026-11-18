@@ -145,7 +145,7 @@ def header(root, active)
   <<~HTML
     <div class="topbar">
       <div class="container">
-        <a href="mailto:chaseproctor@fuselagic.com">chaseproctor@fuselagic.com</a>
+        <a href="mailto:chaseproctor@fuselogic.aero">chaseproctor@fuselogic.aero</a>
         <a href="tel:+15096550252">(509) 655-0252</a>
         <a href="#{root}contact.html">Book a call</a>
       </div>
@@ -196,7 +196,7 @@ def footer(root)
           <div>
             <h3>Contact</h3>
             <ul>
-              <li><a href="mailto:chaseproctor@fuselagic.com">chaseproctor@fuselagic.com</a></li>
+              <li><a href="mailto:chaseproctor@fuselogic.aero">chaseproctor@fuselogic.aero</a></li>
               <li><a href="tel:+15096550252">(509) 655-0252</a></li>
               <li><a href="#{root}contact.html">Book a call with Chase</a></li>
             </ul>
@@ -481,7 +481,7 @@ page("contact.html",
               <h2>Prefer email?</h2>
               <div class="contact-line">
                 <strong>Email</strong>
-                <a href="mailto:chaseproctor@fuselagic.com">chaseproctor@fuselagic.com</a>
+                <a href="mailto:chaseproctor@fuselogic.aero">chaseproctor@fuselogic.aero</a>
               </div>
               <div class="contact-line">
                 <strong>Phone</strong>
