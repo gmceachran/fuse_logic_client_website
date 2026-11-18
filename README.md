@@ -1,6 +1,6 @@
-# FuseLogic client website
+# Fuselogic client website
 
-The public site for FuseLogic LLC, live at **https://fuselogic.aero**. It's a
+The public site for Fuselogic LLC, live at **https://fuselogic.aero**. It's a
 static brochure site that people visit after meeting Chase Proctor
 (co-founder, sales). Its job is to make the company look credible and get the
 visitor to book a call with Chase or email him.
